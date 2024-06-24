@@ -119,6 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acde673490ccbb4d9b7c88e4661b49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_Hand: {fileID: 1341817171644627306}
+  pistol: {fileID: 2228973586828101829, guid: 4d48ad83e3c8bf74eb9b49e04dee3ec5, type: 3}
+  rifle: {fileID: 7945493665757239817, guid: c7e4a3c8e7ca02d4f83a87d6ce7daa3a, type: 3}
+  equippedWeapon: {fileID: 0}
 --- !u!1 &1341817171644627306
 GameObject:
   m_ObjectHideFlags: 0

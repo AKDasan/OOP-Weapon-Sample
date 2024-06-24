@@ -4,15 +4,48 @@ using UnityEngine;
 
 public class Weapon_Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject player_Hand;
+    public GameObject pistol;
+    public GameObject rifle;
 
-    // Update is called once per frame
-    void Update()
+    public GameObject equippedWeapon;
+
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (equippedWeapon != null)
+            {
+                Destroy(equippedWeapon);
+            }
+
+            if (pistol != null)
+            {
+                equippedWeapon = Instantiate(pistol, player_Hand.transform.position, player_Hand.transform.rotation);
+                equippedWeapon.transform.SetParent(player_Hand.transform);
+            }
+            else
+            {
+                Debug.Log("Pistol atanmamýþtýr!");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (equippedWeapon != null)
+            {
+                Destroy(equippedWeapon);
+            }
+
+            if (rifle != null)
+            {
+                equippedWeapon = Instantiate(rifle, player_Hand.transform.position, player_Hand.transform.rotation);
+                equippedWeapon.transform.SetParent(player_Hand.transform);
+            }
+            else
+            {
+                Debug.Log("Rifle atanmamýþtýr!");
+            }
+        }
     }
 }

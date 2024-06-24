@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 
-public class Rifle : MonoBehaviour
+public class Rifle : Weapon
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        W_name = "Rifle";
+        damage = 20f;
+        bulletSpeed = 70f;
+        fireRate = 5f;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetButton("Fire1"))
+        {
+            Shoot();
+        }
+    }
+
+    public override void Shoot()
+    {
+        base.Shoot();
     }
 }
